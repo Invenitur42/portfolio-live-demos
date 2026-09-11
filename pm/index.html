@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Manager demo</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="app-bar">
+    <div>
+      <span class="title">Project Manager</span>
+      <nav style="display:inline;margin-left:1rem">
+        <a href="../index.html">All demos</a>
+      </nav>
+    </div>
+    <button type="button" class="secondary" id="reset">Reset data</button>
+  </div>
+
+  <div class="panel">
+    <div class="banner">Browser demo — changes are saved in localStorage only.</div>
+
+    <div class="row">
+      <div>
+        <label>New project name</label>
+        <input id="projName" placeholder="Website redesign" />
+      </div>
+      <button type="button" id="addProj">Add project</button>
+    </div>
+
+    <div class="row">
+      <div>
+        <label>Active project</label>
+        <select id="projSelect"></select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div style="flex:1">
+        <label>Task title</label>
+        <input id="taskTitle" placeholder="Write brief" style="width:100%" />
+      </div>
+      <div>
+        <label>Column</label>
+        <select id="taskCol">
+          <option value="todo">To Do</option>
+          <option value="doing">In Progress</option>
+          <option value="done">Done</option>
+        </select>
+      </div>
+      <button type="button" id="addTask">Add task</button>
+    </div>
+
+    <div class="grid-3" id="board"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
