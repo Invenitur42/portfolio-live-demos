@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Finance demo</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="app-bar">
+    <div>
+      <span class="title">Finance Tracker</span>
+      <nav style="display:inline;margin-left:1rem">
+        <a href="../index.html">All demos</a>
+      </nav>
+    </div>
+    <button type="button" class="secondary" id="reset">Reset data</button>
+  </div>
+
+  <div class="panel">
+    <div class="banner">Browser demo — balances update as you add transactions.</div>
+
+    <div class="stats" id="stats"></div>
+
+    <h2 style="font-size:1.1rem">Accounts</h2>
+    <div id="accounts" style="margin-bottom:1.5rem"></div>
+
+    <h2 style="font-size:1.1rem">Add transaction</h2>
+    <div class="row">
+      <div>
+        <label>Account</label>
+        <select id="acct"></select>
+      </div>
+      <div>
+        <label>Type</label>
+        <select id="type">
+          <option value="expense">Expense</option>
+          <option value="income">Income</option>
+        </select>
+      </div>
+      <div>
+        <label>Amount</label>
+        <input id="amount" type="number" min="0" step="0.01" placeholder="25.00" />
+      </div>
+      <div style="flex:1">
+        <label>Note</label>
+        <input id="note" placeholder="Groceries" style="width:100%" />
+      </div>
+      <button type="button" id="addTx">Add</button>
+    </div>
+
+    <h2 style="font-size:1.1rem">Recent</h2>
+    <div id="txList"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
