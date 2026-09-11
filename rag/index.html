@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doc Chat demo</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="app-bar">
+    <div>
+      <span class="title">Doc Chat (RAG preview)</span>
+      <nav style="display:inline;margin-left:1rem">
+        <a href="../index.html">All demos</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="banner">
+      This preview searches a fixed sample knowledge base in the browser (no OpenAI key).
+      The full repo wires the same UI flow to FastAPI + pgvector + embeddings.
+    </div>
+
+    <h2 style="font-size:1.1rem">Sample documents</h2>
+    <div id="docs" style="margin-bottom:1.5rem"></div>
+
+    <h2 style="font-size:1.1rem">Ask a question</h2>
+    <div class="row">
+      <input id="q" style="flex:1;width:100%" placeholder="e.g. What is the refund window?" />
+      <button type="button" id="ask">Ask</button>
+    </div>
+
+    <div class="chat" id="chat"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
